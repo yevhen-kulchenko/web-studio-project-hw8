@@ -1,86 +1,136 @@
-.border {
-    border-bottom: 1px solid #ECECEC;
-}
 .heder-nav {
-    display: flex;
-    align-items: center;
-}
-.site-nav {
-    display: flex;
-    margin-left: 93px;
-    &__item:not(:last-child) {
-        margin-right: 50px;
+    @include for-size(tablet) {
+        display: flex;
+        align-items: center;
     }
 }
+.site-nav {
+    display: none;
 
+    @include for-size(tablet) {
+        display: flex;
+        margin-left: 88px;
+        &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    @include for-size(desktop) {
+        display: flex;
+        margin-left: 93px;
+        &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
 .site-nav--current {
+    position: relative;
     color: $accent-color;
+}
+.site-nav--current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
 }
 .site-nav .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
-    &--current {
-        position: relative;
-    }
-    &--current::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: $accent-color;
-    }
 }
 
 .contacts-nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+    display: none;
 
-    &__header-contacts {
-        display: flex;
+    @include for-size(tablet) {
+        display: inline;
         align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        margin-left: auto;
+    
+        &__header-contacts {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.02em;
+            color: $secondary-text-color;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        &__header-contacts:hover,
+        &__header-contacts:focus {
+            color: $accent-color;
+        }
+        &__header-contacts:hover .connect--icon,
+        &__header-contacts:focus .connect--icon {
+            fill: $accent-color;
+        }   
     }
-    &__header-contacts {
-        text-decoration: none;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: $secondary-text-color;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include for-size(desktop) {
+        display: flex;
+    
+        &__header-contacts {
+            display: flex;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
-    &__header-contacts:hover,
-    &__header-contacts:focus {
-        color: $accent-color;
+}
+.item:not(:last-child) {
+    @include for-size(tablet) {
+        margin-bottom: 10px;
     }
-    &__header-contacts:hover .connect--icon,
-    &__header-contacts:focus .connect--icon {
-        fill: $accent-color;
-    }   
+    @include for-size(desktop) {
+        margin-bottom: 0;
+    }
 }
 .contacts-nav .item + .item {
-    margin-left: 50px;
+    @include for-size(desktop) {
+        margin-left: 50px;
+    }
 }
 .envelope {
-    margin-right: 10px;
-    width: 16px;
-    height: 12px;
-    fill: $secondary-text-color;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include for-size(tablet) {
+        margin-right: 8px;
+        width: 14px;
+        height: 10px;
+        fill: $secondary-text-color;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @include for-size(desktop) {
+        margin-right: 10px;
+        width: 16px;
+        height: 12px;
+        fill: $secondary-text-color;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 .smartphone {
-    margin-right: 10px;
-    width: 10px;
-    height: 16px;
-    fill: $secondary-text-color;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include for-size(tablet) {
+        margin-right: 8px;
+        width: 10px;
+        height: 14px;
+        fill: $secondary-text-color;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @include for-size(desktop) {
+        margin-right: 10px;
+        width: 10px;
+        height: 16px;
+        fill: $secondary-text-color;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+.header {
+    border-bottom: 1px solid #ECECEC;
 }

@@ -7,12 +7,40 @@
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
+
+    @include for-size(mobile) {
+
+    }
+    @include for-size(tablet) {
+
+    }
+    @include for-size(desktop) {
+        font-size: 26px;
+        line-height: 31px;    
+    }
 }
 .logo-header {
-    color: $logo-header-color;
+    color: $logo-header-color;    
+    @include for-size(mobile-only) {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    @include for-size(mobile) {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    @include for-size(tablet) {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }
 .logo-footer {
     display: inline-block;
