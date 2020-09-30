@@ -1,0 +1,50 @@
+.section-features {
+    margin: 0;
+}
+.features {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__item {
+        width: calc((100% - 30px * 3) / 4);
+        margin-right: 30px;
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $primary-text-color;
+    }
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: $secondary-text-color;
+    }
+}
+.icon-box {
+    @include flexbox(center, center);
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $additional-background-color;
+    border-radius: 4px;
+}
+.hidden {
+    font-size: 0;
+}

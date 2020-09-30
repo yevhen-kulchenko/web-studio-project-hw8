@@ -1,0 +1,19 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/commons";
+
+@import "./components/logo";
+@import "./components/buttons";
+@import "./components/social-icons";
+@import "./components/modal";
+
+@import "./layouts/header";
+@import "./layouts/banner";
+@import "./layouts/features";
+@import "./layouts/specialization";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";
+
+@import "./layouts/portfolio";

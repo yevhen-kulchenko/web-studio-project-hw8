@@ -1,0 +1,31 @@
+.banner {
+    flex-direction: column;
+    @include flexbox(center, center);
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 94px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+       ), 
+       url(../images/banner.jpg);
+   background-color: $baner-background-color;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+}
+.banner-headline {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $title-text-color;
+}
