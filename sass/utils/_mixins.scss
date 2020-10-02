@@ -10,7 +10,7 @@
     $desktop: 1200px;
   
     @if $range == mobile-only {
-      @media (max-width: #{$mobile - 1}) {
+      @media screen and (max-width: #{$mobile - 1}) {
         @content;
       }
     } @else if $range == mobile {

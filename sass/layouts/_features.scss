@@ -1,14 +1,12 @@
 .section-features {
     margin: 0;
 }
+.hidden {
+    font-size: 0;
+}
 .features {
-    display: flex;
-    flex-wrap: nowrap;
+    margin-bottom: 60px;
 
-    &__item {
-        width: calc((100% - 30px * 3) / 4);
-        margin-right: 30px;
-    }
     &__icon {
         width: 70px;
         height: 70px;
@@ -27,7 +25,7 @@
     }
     &__text {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 30px;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -36,15 +34,62 @@
         letter-spacing: 0.03em;
         color: $secondary-text-color;
     }
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        &__item {
+            width: calc((100% - 30px) / 2);
+        }
+        &__item:not(:nth-child(2n)) {
+			margin-right: 30px;
+        }
+    }
+    @include for-size(desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+    
+        &__item {
+            width: calc((100% - 30px * 3) / 4);
+            margin-right: 30px;
+        }
+        &__text {
+            margin-bottom: 0;
+        }
+    }
 }
 .icon-box {
-    @include flexbox(center, center);
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-    background-color: $additional-background-color;
-    border-radius: 4px;
-}
-.hidden {
-    font-size: 0;
+    @include for-size(mobile-only) {
+        @include flexbox(center, center);
+        width: 100%;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: $additional-background-color;
+        border-radius: 4px;
+    }
+    @include for-size(mobile) {
+        @include flexbox(center, center);
+        width: 100%;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: $additional-background-color;
+        border-radius: 4px;
+    }
+
+    @include for-size(tablet) {
+        @include flexbox(center, center);
+        width: 100%;
+        height: 120px;
+    }
+
+    @include for-size(desktop) {
+        @include flexbox(center, center);
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: $additional-background-color;
+        border-radius: 4px;
+    }
 }

@@ -1,22 +1,49 @@
 .section-team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: $additional-background-color;
+    @include for-size(mobile-only) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        background-color: $additional-background-color;
+    }
+    @include for-size(mobile) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        background-color: $additional-background-color;
+    }
+    @include for-size(tablet) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    @include for-size(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+.section-heading {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+
+    @include for-size(desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 42px;
+    }
 }
 .team {
-    display: flex;
-    flex-wrap: wrap;
-
-    &__card {
-        width: calc((100% - 30px * 3) / 4);
-        margin-right: 30px;
-    }
-    &__card:nth-child(4n) {
-        margin-right: 0;
-    }
     &__name {
         margin-top: 0;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
@@ -27,7 +54,7 @@
         color: $primary-text-color;
     }
     &__position {
-        margin-top: 0;
+        margin: 0;
         margin-bottom: 16px;
         font-family: Roboto;
         font-style: normal;
@@ -40,12 +67,65 @@
     }
     &__photo {
         margin-bottom: 30px;
-    } 
+    }   
+
+    @include for-size(mobile-only) {
+        &__card {
+            margin-bottom: 30px;
+        }
+    }
+    @include for-size(mobile) {
+        &__card {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+
+        // &__card {
+        //     width: calc((100% - 30px) / 2);
+        //     margin-bottom: 30px;
+        // }
+        &__card:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    }
+
+    @include for-size(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+    
+        &__card {
+            // width: calc((100% - 30px * 3) / 4);
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+        &__card:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
 }
 .bg-card {
-    width: 270px;
-    height: 428px;
     background-color: $main-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @include for-size(mobile-only) {
+        width: 100%;
+        height: 622px;
+    }
+    @include for-size(mobile) {
+        width: 450px;
+        height: 622px;
+    }
+    @include for-size(tablet) {
+        width: 354px;
+        height: 536px;
+    }
+    @include for-size(desktop) {
+        width: 270px;
+        height: 428px;
+    }
 }

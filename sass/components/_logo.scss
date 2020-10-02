@@ -34,13 +34,11 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
     @include for-size(tablet) {
         display: block;
         margin-top: 0;
         margin-bottom: 0;
     }
-
 }
 .logo-footer {
     display: inline-block;
