@@ -114,7 +114,7 @@
 
     @include for-size(mobile-only) {
         width: 100%;
-        height: 622px;
+        height: 100%;
     }
     @include for-size(mobile) {
         width: 450px;
