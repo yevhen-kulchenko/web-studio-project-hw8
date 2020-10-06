@@ -3,8 +3,7 @@
 }
 .heder-nav {
     position: relative;
-    display: inline-flex;
-    width: 100%;
+    display: flex;
 
     @include for-size(tablet) {
         display: flex;
@@ -42,6 +41,8 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-box {
+    width: 100%;
+    
     &.is-open {
         display: block;
     }
@@ -60,8 +61,7 @@
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        
+
         &__item:not(:last-child) {
             margin-right: 50px;
         }
@@ -162,11 +162,10 @@
         @include for-size(tablet) {
             display: inline;
             align-items: center;
-            // margin-left: auto;
+            margin-left: auto;
         }
         @include for-size(desktop) {
             display: flex;
-            // margin-left: auto;
             padding-top: 32px;
             padding-bottom: 32px;
             font-size: 14px;
@@ -235,15 +234,11 @@
             margin-right: 8px;
             width: 14px;
             height: 10px;
-            // fill: $secondary-text-color;
-            // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         @include for-size(desktop) {
             margin-right: 10px;
             width: 16px;
             height: 12px;
-            // fill: $secondary-text-color;
-            // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     }
     .smartphone {
@@ -257,15 +252,11 @@
             margin-right: 8px;
             width: 10px;
             height: 14px;
-            // fill: $secondary-text-color;
-            // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         @include for-size(desktop) {
             margin-right: 10px;
             width: 10px;
             height: 16px;
-            fill: $secondary-text-color;
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     }    
 }
