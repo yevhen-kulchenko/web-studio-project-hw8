@@ -1,49 +1,37 @@
 .banner {
-    @include for-size(mobile-only) {
-        text-align: center;
-        max-width: 480px;
-        min-height: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 60px;
-        background-image: linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-           ), 
-           url(../images/mobile-banner.jpg);
-       background-color: $baner-background-color;
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: cover;    
-    }
-    @include for-size(mobile) {
-        text-align: center;
-        max-width: 480px;
-        min-height: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 60px;
-        background-image: linear-gradient(
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-           ), 
-           url(../images/mobile-banner.jpg);
-       background-color: $baner-background-color;
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: cover;    
-    }
+    text-align: center;
+    max-width: 480px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    background-color: $baner-background-color;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+       ), 
+       url(../images/mobile-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
 
-    @include for-size(tablet) {
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+           ), 
+           url(../images/mobile-banner.jpg);
+    }
+    @media screen and (min-width: 768px) {
         max-width: 768px;
-        min-height: 400px;
         background-image: linear-gradient(
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
            ), 
            url(../images/tablet-banner.jpg);
     }
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
         flex-direction: column;
         @include flexbox(center, center);
         max-width: 1600px;
@@ -71,7 +59,7 @@
     text-transform: uppercase;
     color: $title-text-color;
 
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
         padding: 0;
         font-size: 44px;
         line-height: 60px;

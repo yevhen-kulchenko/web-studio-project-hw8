@@ -1,12 +1,12 @@
 .section-spec {
     padding: 0;
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
         padding-top: 94px;
     }
 }
 .section-spec .section-heading {
     display: none;
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,7 +24,7 @@
 }
 .activity {
     display: none;
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 94px;
