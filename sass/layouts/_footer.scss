@@ -22,6 +22,12 @@
     &__contacts:focus {
         color: $accent-color;
     }
+
+    @media screen and (max-width: 1199px) {
+        &__contacts:last-child {
+            margin-bottom: 0;
+        }
+    }
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -92,7 +98,7 @@
 }
 .form {
     @media screen and (min-width: 768px) {
-        margin-top: 60px;
+        margin-top: 63px;
     }
     @media screen and (min-width: 1200px) {
         margin-top: 0;
