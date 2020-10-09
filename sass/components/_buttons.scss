@@ -15,7 +15,7 @@
     color: $title-text-color;
     background-color: $accent-color;
 }
-.modal-batton {
+.modal-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -47,7 +47,7 @@
     @media screen and (min-width: 768px) {
         @include flexbox(center);
         margin-top: 60px;
-        margin-bottom: 14px;
+        margin-bottom: 30px;
         padding-top: 0;
     }
     @media screen and (min-width: 1200px) {
