@@ -24,7 +24,12 @@
             url(../images/banner/banner-mobile@2x.jpg);
     }
 
+    @media screen and (max-width: 768px) {
+        width: 480px;
+    }
+    
     @media screen and (min-width: 768px) {
+        width: 768px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
             url(../images/banner/banner-tablet.jpg);
@@ -43,7 +48,7 @@
     @media screen and (min-width: 1200px) {
         @include flexbox(center, center);
         flex-direction: column;
-        max-width: 1600px;
+        width: 1600px;
         height: 600px;
         margin-bottom: 94px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
