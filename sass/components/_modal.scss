@@ -19,8 +19,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    flex-direction: column;
     @include flexbox(center, center);
+    flex-direction: column;
     padding: 40px;
     transform: translate(-50%, -50%) scale(1);
     width: calc(100% - 30px);
@@ -139,6 +139,7 @@
 .dealbox {
     display: flex;
     align-items: center;
+    text-align: left;
     margin-top: 15px;
 }
 .checkbox {
@@ -152,7 +153,7 @@
     overflow: hidden;
 }
 .dealbox__icon {
-    display: inline-block;
+    display: block;
     width: 16px;
     height: 15px;
     border: 2px solid $primary-text-color;
