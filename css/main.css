@@ -1695,6 +1695,9 @@ img {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.06em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #212121;
 }
 
@@ -1748,7 +1751,6 @@ img {
     margin-bottom: 0;
   }
   .projects__card {
-    width: 354px;
     height: 404px;
   }
 }
@@ -1812,22 +1814,10 @@ img {
 }
 
 .indent {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .indent {
-    padding-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .indent {
-    padding-bottom: 20px;
-  }
 }
 
 .link-list {

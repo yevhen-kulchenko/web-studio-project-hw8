@@ -16,6 +16,9 @@
         font-size: 18px;
         line-height: 36px;
         letter-spacing: 0.06em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         color: $primary-text-color;
     }
     &__description {
@@ -62,7 +65,7 @@
             margin-bottom: 0;
         }
         &__card {
-            width: 354px;
+            // width: 354px;
             height: 404px;
         }
     }
@@ -112,17 +115,10 @@
     }
 }
 .indent {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 20px;
     padding-bottom: 20px;   
-
-    @media screen and (min-width: 768px) {
-        padding-bottom: 0;   
-    }
-    @media screen and (min-width: 1200px) {
-        padding-bottom: 20px;
-    }
 }
 .link-list {
     text-decoration: none;
